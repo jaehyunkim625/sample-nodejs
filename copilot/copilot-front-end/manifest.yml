@@ -42,8 +42,8 @@ network:
 
 # You can override any of the values defined above by environment.
 environments:
- test:
-   count: 3               # Number of tasks to run for the "test" environment. 위에 count설정을 override함
+  test:
+    count: 2               # Number of tasks to run for the "test" environment. 위에 count설정을 override함
    # autoscaling setting (you can also specify to use Spot instance)
   #  count:
   #   range: 1-10
@@ -51,3 +51,10 @@ environments:
   #   memory_percentage: 80
   #   requests: 10000
   #   response_time: 2s
+  prod:
+    count:
+      range: 1-10
+      cpu_percentage: 50
+      memory_percentage: 50
+      requests: 10000
+      response_time: 2s

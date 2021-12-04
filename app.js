@@ -3,7 +3,7 @@ const app = express()
 const port = 3000
 
 app.get('/', (req, res) => {
-  res.send('Hello AWS Copilot!')
+  res.send('Hello AWS Copilot! ver.3')
 })
 
 app.listen(port, () => {
