@@ -1,9 +1,10 @@
 const express = require('express')
 const app = express()
 const port = 3000
+const env = process.env.COPILOT_ENVIRONMENT_NAME
 
 app.get('/', (req, res) => {
-  res.send('Hello AWS Copilot! ver.3')
+  res.send('Hello AWS Copilot! Environment: ' + env)
 })
 
 app.listen(port, () => {
