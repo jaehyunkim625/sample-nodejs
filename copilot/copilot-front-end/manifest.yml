@@ -11,7 +11,7 @@ http:
   # Requests to this path will be forwarded to your service.
   # To match all requests you can use the "/" path.
   path: '/'
-  alias: example.aws
+  # alias: example.aws
   # You can specify a custom health check path. The default is "/".
   healthcheck: '/'
 
@@ -43,7 +43,7 @@ network:
 # You can override any of the values defined above by environment.
 environments:
  test:
-   count: 4               # Number of tasks to run for the "test" environment. 위에 count설정을 override함
+   count: 3               # Number of tasks to run for the "test" environment. 위에 count설정을 override함
    # autoscaling setting (you can also specify to use Spot instance)
   #  count:
   #   range: 1-10
