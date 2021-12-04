@@ -4,6 +4,7 @@ const port = 3000
 const env = process.env.COPILOT_ENVIRONMENT_NAME
 
 app.get('/', (req, res) => {
+  console.log("Hello Get is called from client (" + req.socket.remoteAddress + ")")
   res.send('Hello AWS Copilot! Environment: ' + env)
 })
 
